@@ -1,5 +1,5 @@
 # FOSS-Hack-2025
-**Hey Everyone we are BINARY BRAINS aspiring first year students from Delhi Technical Campus, GGSIPU. It's our first hackathon, we have minimum experience but maximum energy. And so here it is, our first project, a Healthcare Management website. 
+**Hey Everyone we are BINARY BRAINS aspiring first year students from Delhi Technical Campus, GGSIPU. It's our first hackathon, we have minimum experience but maximum energy. And so here it is, our first project, a Healthcare Management website.**
 
 HEALTH HARBOUR
 A healthcare management website for overall health development of individuals.
