@@ -4,11 +4,11 @@
 HEALTH HARBOUR
 A healthcare management website for overall health development of individuals.
 What we plan to do:
-1)suggestions for health problems(mental and physical)
-2)emergency contact numbers for free consultation of doctors and psychologists 
-3)free general diagnosis
-4)appointment scheduling
-5)free general remedies suggestions from reputed sources online.
+1) suggestions for health problems(mental and physical)
+2) emergency contact numbers for free consultation of doctors and psychologists 
+3) free general diagnosis
+4) appointment scheduling
+5) free general remedies suggestions from reputed sources online.
 
 How we plan to do this:
 1) Design good webpages with informative content regarding the remedies and suggestions to upgrade our lifestyle for a better mental and physical health.
