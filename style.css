@@ -382,7 +382,7 @@ ul{
     display: flex;
     justify-content: space-evenly;
     max-width: 1200px;
-    width: 90%;
+    width: 100%;
     overflow: hidden; 
     padding-top: 20px;
     padding-bottom: 20px;
@@ -392,11 +392,9 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    max-width: 500px;/*350px*/
+    max-width: 350px;
     height: 300px;
     border: 5px solid #ffffff;
-    padding: 10px;
-    margin:10px;
 }
 .service-box:hover{
     border: 5px solid #c7d0eb;
@@ -454,15 +452,20 @@ ul{
 
 .s-box1{
     background-color: #ecf6fd;
+   
 }
 .s-box2{
-    background-color: #edfff3;
+    background-color: #edfff3;   
+    width: 279px;
 }
 .s-box3{
     background-color: #fff0ee;
+    width: 279px;
 }
 .s-box4{
     background-color: #fcffcf;
+    width: 279px;
+
 }
 .service-btn{
     color: #535353;
