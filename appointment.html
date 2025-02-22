@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Appointment Booking</title>
+  <link rel="stylesheet" href="appointment.css">
+  <script src="appointment.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Book a Healthcare Appointment</h1>
+    <p>Fill out the form below to schedule your appointment:</p>
+    
+    <form id="appointmentForm">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="date">Appointment Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="time">Appointment Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor" required>
+          <option value="">Choose a doctor</option>
+          <option value="Dr. John Doe">Dr. John Doe (Cardiologist)</option>
+          <option value="Dr. Jane Smith">Dr. Jane Smith (Pediatrician)</option>
+          <option value="Dr. Emily Brown">Dr. Emily Brown (General Physician)</option>
+        </select>
+      </div>
+      
+      <button type="submit">Book Appointment</button>
+    </form>
+    
+    <div id="confirmationMessage" class="hidden">
+      <h2>Appointment Booked Successfully!</h2>
+      <p>Thank you, <span id="userName"></span>. Your appointment with <span id="selectedDoctor"></span> on <span id="appointmentDate"></span> at <span id="appointmentTime"></span> has been confirmed.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
