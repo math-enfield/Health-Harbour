@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form - Health Harbour</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: linear-gradient(135deg, #f9f9f9, #e6f4f9);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: #68c1ea;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #68c1ea;
+        }
+        p {
+            color: #555555;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #dddddd;
+            background-color: #ffffff;
+            color: #333333;
+            font-size: 14px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #68c1ea;
+            outline: none;
+            box-shadow: 0 0 5px rgba(104, 193, 234, 0.5);
+        }
+        button {
+            background-color: #68c1ea;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #56a3c9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="logo.png" alt="Health Harbour logo">  <!-- Replace with actual logo -->
+        <h1>Health Harbour</h1>
+    </div>
+    <h2>Hey there 👋</h2>
+    <p>Request a new appointment in 10 seconds</p>
+    
+    <label for="doctor">Doctor</label>
+    <select id="doctor" required>
+        <option value="dr_adam_smith">Dr. Adam Smith</option>
+        <option value="dr_shaurya_shukla">Dr. Shaurya Shukla</option>
+        <option value="dr_b">Dr. B</option>
+        <option value="dr_c">Dr. C</option>
+        <option value="dr_d">Dr. D</option>
+        <!-- Add more doctors as needed -->
+    </select>
+
+    <label for="reason">Reason for appointment</label>
+    <input type="text" id="reason" placeholder="ex: Annual monthly check-up" required>
+
+    <label for="additional-comments">Additional comments/notes</label>
+    <textarea id="additional-comments" placeholder="ex: Prefer afternoon appointments, if possible" rows="3"></textarea>
+
+    <label for="appointment-date">Expected appointment date</label>
+    <input type="date" id="appointment-date" required>
+
+    <button type="submit">Submit and continue</button>
+</div>
+
+</body>
+</html>
