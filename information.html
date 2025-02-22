@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePulse Patient Form</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #68c1ea;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: 500;
+            border-bottom: 2px solid #68c1ea;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555555;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input:focus, select:focus {
+            border-color: #68c1ea;
+            outline: none;
+            box-shadow: 0 0 5px rgba(104, 193, 234, 0.5);
+        }
+        .consent {
+            margin-top: 25px;
+        }
+        .consent label {
+            font-weight: 400;
+            color: #555555;
+        }
+        button {
+            background-color: #68c1ea;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #56a3c9;
+        }
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome 👋</h1>
+        <h2>Personal Information</h2>
+        <form action="/submit-form" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="johndoe@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="123-456-7890">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="123 Main St, City, Country">
+            </div>
+            <div class="form-group">
+                <label for="emergency">Emergency Contact</label>
+                <input type="text" id="emergency" placeholder="Jane Doe - 987-654-3210">
+            </div>
+            <div class="form-group">
+                <label for="occupation">Occupation</label>
+                <input type="text" id="occupation" placeholder="Software Engineer">
+            </div>
+            
+            <h2>Medical Information</h2>
+            <div class="form-group">
+                <label for="primary-condition">Primary Condition</label>
+                <select id="primary-condition">
+                    <option value="Asthma">Asthma</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="insurance-number">Insurance Policy Number</label>
+                <input type="text" id="insurance-number" placeholder="123456789">
+            </div>
+            <div class="form-group">
+                <label for="allergies">Allergies</label>
+                <input type="text" id="allergies" placeholder="Peanuts, Pollen">
+            </div>
+            <div class="form-group">
+                <label for="medications">Current Medications</label>
+                <input type="text" id="medications" placeholder="Ibuprofen, Vitamin D">
+            </div>
+            
+            <h2>Identification and Verification</h2>
+            <div class="form-group">
+                <label for="birth-certificate">Birth Certificate No.</label>
+                <input type="text" id="birth-certificate" placeholder="123456789">
+            </div>
+            <div class="form-group">
+                <label for="ssn">Social Security Number</label>
+                <input type="text" id="ssn" placeholder="123-45-6789">
+            </div>
+            
+            <h2>Consent and Privacy</h2>
+            <div class="consent">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent-treatment">
+                    <label for="consent-treatment">I consent to receive treatment for my health condition.</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent-disclosure">
+                    <label for="consent-disclosure">I consent to the use and disclosure of my health information for treatment purposes.</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="acknowledge">
+                    <label for="acknowledge">I acknowledge that I have reviewed and agree to the privacy policy.</label>
+                </div>
+            </div>
+            
+            <button type="submit">Submit and Continue</button>
+        </form>
+    </div>
+
+</body>
+</html>
