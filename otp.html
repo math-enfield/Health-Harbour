@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Harbour-Login </title>
+    <link rel="icon" href="images/favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ececec 0%, #eaeaff 100%);
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+
+        h1 {
+            color: #2d3748;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        .mobile-input {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .mobile-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .otp-section {
+            display: none;
+        }
+
+        .otp-display {
+            background: #f7fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: #f8f8f8;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #4a5568;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .generate-btn:hover {
+            background: #2d3748;
+        }
+
+        .otp-inputs {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .otp-input {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            font-size: 1.2rem;
+            border: 2px solid #cbd5e0;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+
+        .otp-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .verify-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #48bb78;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .verify-btn:hover {
+            background: #38a169;
+        }
+
+        .error {
+            color: #e53e3e;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .otp-input {
+                height: 45px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mobile OTP Verification</h1>
+        <div class="error" id="errorMsg">Please enter valid mobile number</div>
+        
+        <input type="tel" class="mobile-input" id="mobileInput" 
+               placeholder="Enter 10-digit mobile number" maxlength="10">
+        
+        <button class="generate-btn" onclick="sendOTP()">Send OTP</button>
+
+        <div class="otp-section" id="otpSection">
+            <div class="otp-display" id="otpDisplay">
+                OTP sent to ******<span id="mobileLastDigits"></span>
+            </div>
+            
+            <div class="otp-inputs">
+                <input type="number" class="otp-input" maxlength="1" oninput="moveFocus(this, 1)">
+                <input type="number" class="otp-input" maxlength="1" oninput="moveFocus(this, 2)">
+                <input type="number" class="otp-input" maxlength="1" oninput="moveFocus(this, 3)">
+                <input type="number" class="otp-input" maxlength="1" oninput="moveFocus(this, 4)">
+                <input type="number" class="otp-input" maxlength="1" oninput="moveFocus(this, 5)">
+                <input type="number" class="otp-input" maxlength="1" oninput="moveFocus(this, 6)">
+            </div>
+
+            <button class="verify-btn" onclick="verifyOTP()">Verify OTP</button>
+        </div>
+    </div>
+
+    <script>
+        let generatedOTP = '';
+        let userMobile = '';
+
+        function sendOTP() {
+            const mobileInput = document.getElementById('mobileInput');
+            const errorMsg = document.getElementById('errorMsg');
+            const mobileNumber = mobileInput.value.trim();
+
+            if (/^\d{10}$/.test(mobileNumber)) {
+                userMobile = mobileNumber;
+                errorMsg.style.display = 'none';
+                generateOTP();
+                document.getElementById('otpSection').style.display = 'block';
+                document.getElementById('mobileLastDigits').textContent = mobileNumber.slice(6);
+            } else {
+                errorMsg.style.display = 'block';
+                document.getElementById('otpSection').style.display = 'none';
+            }
+        }
+
+        function generateOTP() {
+            generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
+            // In real implementation, send OTP to mobile via SMS gateway
+            console.log(OTP for ${userMobile}: ${generatedOTP});
+        }
+
+        function moveFocus(input, nextIndex) {
+            if (input.value.length === 1) {
+                const nextInput = document.querySelector(.otp-inputs :nth-child(${nextIndex + 1}));
+                if (nextInput) nextInput.focus();
+            }
+            
+            if (input.value.length === 0 && nextIndex > 1) {
+                const prevInput = document.querySelector(.otp-inputs :nth-child(${nextIndex - 1}));
+                if (prevInput) prevInput.focus();
+            }
+        }
+
+        function verifyOTP() {
+            const inputs = document.querySelectorAll('.otp-input');
+            const enteredOTP = Array.from(inputs).map(input => input.value).join('');
+            
+            if (enteredOTP === generatedOTP) {
+                alert(Verification successful for ${userMobile}!);
+                resetForm();
+            } else {
+                alert('Invalid OTP! Please try again.');
+                inputs.forEach(input => input.value = '');
+                document.querySelector('.otp-input').focus();
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('mobileInput').value = '';
+            document.querySelectorAll('.otp-input').forEach(input => input.value = '');
+            document.getElementById('otpSection').style.display = 'none';
+            generatedOTP = '';
+            userMobile = '';
+        }
+
+        // Input validations
+        document.getElementById('mobileInput').addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+        });
+
+        document.querySelectorAll('.otp-input').forEach(input => {
+            input.addEventListener('input', (e) => {
+                e.target.value = e.target.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script>
+</body>
+</html>
