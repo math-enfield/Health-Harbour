@@ -395,6 +395,7 @@ ul{
     max-width: 350px;
     height: 300px;
     border: 5px solid #ffffff;
+    padding-left: 8px;
 }
 .service-box:hover{
     border: 5px solid #c7d0eb;
@@ -470,7 +471,8 @@ ul{
 .service-btn{
     color: #535353;
     font-size: 0.9rem;
-    margin-top: 10px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     text-align: center;
     padding: 0px 10px;
 }
@@ -594,175 +596,43 @@ ul{
     color: #ffffff;
     font-weight: 600;
 }
-/*==our-team====================*/
-#our-team{
-    max-width: 1200px;
-    width: 90%;
-    margin: 80px auto;
-}
-.our-team-heading{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.our-team-heading h3{
-    font-size: 2.4rem;
+/*our-team*/
+.team-heading{
+    font-size: 1.8rem;
     color: #122853;
-}
-.our-team-heading p{
-    color: #535353;
-    letter-spacing: 0.3px;
-    font-size: 0.9rem;
-}
-.team-box-container{
-    width: 100%;
-    overflow: hidden;
-    margin-top: 40px;
-}
-.team-box{
-    max-width: 100%;/*300px*/
-    display: flex;
-    flex-direction: column;
-}
-.team-img{
-    background-color: #f5f7fb;
-    padding: 10px 10px 0px 10px;
-    border-radius: 10px;
-    height: 300px;
-    display: flex;
-    align-items: flex-end;
-}
-.team-img img{
-    width: 100%;
-    height: 95%;
-    object-fit: contain;
-    object-position: center bottom;
-}
-.team-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    margin-top: 10px;
-}
-.team-text strong{
-    color: #122853;
-}
-.team-text span{
-    color: #303030;
-    font-size: 0.9rem;
-    margin-top: 5px;
-}
-/*==Testimonials=============================*/
-#testimonials{
-    background-color: #f5f7fb;
-    padding: 50px 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.testimonials-heading{
-    max-width: 1200px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.testimonials-heading h3{
-    font-size: 2.4rem;
-    color: #122853;
-}
-.testimonials-heading p{
-    color: #535353;
-    margin-top: 10px;
+    font-weight: 700;
     max-width: 600px;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    line-height: 1.4rem;
+    margin-left: 100px;
+    margin-top: 70px;
+    margin-bottom: 30px;
 }
-.testimonials-content{
-    max-width: 1200px;
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    margin-top:50px;
+.box{
+    height: 400px;
+    width: 24%;
+    background-color: #f5f7fb;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
 }
-.testimonials-img{
-    height: 100%;
-    margin-left: auto;
-    margin-right: 60px;
-}
-.testimonials-img img{
-    height: 100%;
-    max-height: 450px;
-    object-fit: contain;
-    object-position: center;
-}
-.testimonials-box-container{
-    margin-top: 50px;
-    overflow: hidden;
-}
-.testimonials-box{
+.shop-section{
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
-.t-profile{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.box-img{
+    height: 320px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-.t-profile-img{
-    width: 70px;
-    height: 70px;
-    border-radius: 6px;
-    background-color: #c7d0eb;
+.box-content{
+    margin-left: 20px;
     margin-right: 10px;
-    overflow: hidden;
+
 }
-.t-profile-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.t-profile-text{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.t-profile-text strong{
-    color: #122853;
-    font-size: 1.2rem;
-}
-.t-profile-text span{
-    color: #535353;
-    font-size: 0.9rem;
-    letter-spacing: 0.3px;
-}
-.t-rating{
-    font-size: 0.8rem;
-    color: #ffbc02;
-    margin-top: 5px;
-}
-.testimonials-box p{
-    font-size: 0.9rem;
-    color: #122853;
-    line-height: 1.4rem;
-    letter-spacing: 0.3px;
-    margin-top: 30px;
-}
-.swiper-pagination{
-   position: static !important;
-}
+
 /*==subscribe=====================*/
 #subscribe{
     max-width: 1000px;
@@ -775,6 +645,7 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
 }
 #subscribe h3{
     font-size: 2.6rem;
@@ -817,7 +688,8 @@ ul{
 /*==footer================================*/
 footer{
     width: 100%;
-    background-color:  #f5f7fb;
+    background: linear-gradient(to top, rgb(176, 176, 194), white);
+
 }
 .footer-container{
     max-width: 1200px;
