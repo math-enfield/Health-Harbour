@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f0f0f0, #ffffff); /* Grey to white gradient */
+    color: #333;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #007BFF; /* Blue theme */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #007BFF; /* Blue theme */
+  }
+  
+  input, textarea, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  button {
+    background: #007BFF; /* Blue theme */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Confirmation Message Styles */
+  #confirmationMessage {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e9f5ff; /* Light blue background */
+    border-radius: 5px;
+    text-align: center;
+    display: none; /* Hidden by default */
+  }
+  
+  #confirmationMessage h2 {
+    color: #007BFF; /* Blue theme */
+    margin-bottom: 10px;
+  }
+  
+  #confirmationMessage p {
+    color: #333;
+  }
+  
+  .hidden {
+    display: none;
+  }
