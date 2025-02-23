@@ -1,272 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Harbour- Physical Health</title>
-    <link rel="icon" href="images/favicon.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #4dabf7;
-            --background-light: #f8f9fa;
-            --background-dark: #e9ecef;
-        }
-
-            *{
-          margin: 0px;
-          padding: 0px;
-          font-family: sans-serif;
-          box-sizing: border-box;
-          scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--background-light);
-            line-height: 1.6;
-        }
-
-        header {
-            background: white;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            width: 180px;
-        }
-        .logo span{
-        background-color: #014dd5;
-        color: #ffffff;
-        padding: 0px 5px;
-        border-radius: 5px;
-        font-weight: 600;
-        margin-right: 5px;
-        }
-        .nav-links a {
-            color: #495057;
-            text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .hero {
-            padding: 5rem 2rem;
-            text-align: center;
-            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
-                        url('physio-bg.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            color: #212529;
-            margin-bottom: 1.5rem;
-        }
-
-        .services {
-            padding: 4rem 2rem;
-            background: var(--background-dark);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .stats {
-            padding: 4rem 2rem;
-            background: white;
-            text-align: center;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 2rem auto;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .cta-section {
-            padding: 4rem 2rem;
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .button:hover {
-            background: #339af0;
-        }
-
-        footer {
-            background: #212529;
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 2rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physical Health Issues</title>
+  <link rel="stylesheet" href="physical.css">
+  <script src="physical.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo"><span>Health</span>Harbour</a>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
+  <div class="container">
+    <h1>Physical Health Issues</h1>
 
-    <section class="hero">
-        <h1>Transform Your Physical Health</h1>
-        <p>Professional care and personalized treatment plans for optimal wellness</p>
-        <a href="#contact" class="button">Book Consultation</a>
-    </section>
+    <!-- Back Pain -->
+    <div class="health-issue">
+      <h2>Back Pain</h2>
+      <p><strong>Causes:</strong> Poor posture, lack of exercise, muscle strain.</p>
+      <p><strong>Remedies:</strong> Stretching, physical therapy, pain relievers.</p>
+      <p><strong>Preventions:</strong> Maintain good posture, exercise regularly, avoid heavy lifting.</p>
+    </div>
 
-    <section class="services">
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-dumbbell service-icon"></i>
-                <h3>Personal Training</h3>
-                <p>Customized exercise programs tailored to your needs</p>
-                <a href="#" class="button">Learn More</a>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-utensils service-icon"></i>
-                <h3>Nutrition Plans</h3>
-                <p>Science-based dietary guidance for better health</p>
-                <a href="#" class="button">Learn More</a>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-hand-holding-medical service-icon"></i>
-                <h3>Recovery Programs</h3>
-                <p>Specialized rehabilitation and injury recovery</p>
-                <a href="#" class="button">Learn More</a>
-            </div>
-        </div>
-    </section>
+    <!-- Obesity -->
+    <div class="health-issue">
+      <h2>Obesity</h2>
+      <p><strong>Causes:</strong> Overeating, lack of physical activity, genetics.</p>
+      <p><strong>Remedies:</strong> Balanced diet, regular exercise, medical consultation.</p>
+      <p><strong>Preventions:</strong> Healthy eating habits, active lifestyle, portion control.</p>
+    </div>
 
-    <section class="stats">
-        <h2>Our Impact</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h3>95%</h3>
-                <p>Success Rate</p>
-            </div>
-            <div class="stat-item">
-                <h3>5000+</h3>
-                <p>Patients Helped</p>
-            </div>
-            <div class="stat-item">
-                <h3>50+</h3>
-                <p>Expert Professionals</p>
-            </div>
-        </div>
-    </section>
+    <!-- Diabetes -->
+    <div class="health-issue">
+      <h2>Diabetes</h2>
+      <p><strong>Causes:</strong> High sugar intake, obesity, family history.</p>
+      <p><strong>Remedies:</strong> Medication, insulin therapy, diet control.</p>
+      <p><strong>Preventions:</strong> Monitor blood sugar, healthy diet, regular exercise.</p>
+    </div>
 
-    <section class="cta-section">
-        <h2>Start Your Wellness Journey Today</h2>
-        <p>Take the first step towards better physical health</p>
-        <a href="#contact" class="button">Get Started</a>
-    </section>
+    <!-- Hypertension (High Blood Pressure) -->
+    <div class="health-issue">
+      <h2>Hypertension (High Blood Pressure)</h2>
+      <p><strong>Causes:</strong> High salt intake, stress, lack of exercise.</p>
+      <p><strong>Remedies:</strong> Medication, reduced salt intake, stress management.</p>
+      <p><strong>Preventions:</strong> Regular exercise, healthy diet, limit alcohol consumption.</p>
+    </div>
 
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h4>Contact Us</h4>
-                <p>Email: contact@physiocare.com</p>
-                <p>Phone: (555) 123-4567</p>
-            </div>
-            <div>
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div>
-                <h4>Location</h4>
-                <p>123 Wellness Street</p>
-                <p>Health City, HC 45678</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Arthritis -->
+    <div class="health-issue">
+      <h2>Arthritis</h2>
+      <p><strong>Causes:</strong> Aging, joint injury, autoimmune disorders.</p>
+      <p><strong>Remedies:</strong> Pain relievers, physical therapy, joint surgery.</p>
+      <p><strong>Preventions:</strong> Maintain a healthy weight, exercise regularly, protect joints.</p>
+    </div>
+
+    <!-- Asthma -->
+    <div class="health-issue">
+      <h2>Asthma</h2>
+      <p><strong>Causes:</strong> Allergies, air pollution, respiratory infections.</p>
+      <p><strong>Remedies:</strong> Inhalers, avoiding triggers, medication.</p>
+      <p><strong>Preventions:</strong> Avoid allergens, quit smoking, regular check-ups.</p>
+    </div>
+
+    <!-- Migraine -->
+    <div class="health-issue">
+      <h2>Migraine</h2>
+      <p><strong>Causes:</strong> Stress, hormonal changes, certain foods.</p>
+      <p><strong>Remedies:</strong> Painkillers, rest, avoiding triggers.</p>
+      <p><strong>Preventions:</strong> Manage stress, regular sleep, stay hydrated.</p>
+    </div>
+
+    <!-- Heart Disease -->
+    <div class="health-issue">
+      <h2>Heart Disease</h2>
+      <p><strong>Causes:</strong> High cholesterol, smoking, sedentary lifestyle.</p>
+      <p><strong>Remedies:</strong> Medication, surgery, lifestyle changes.</p>
+      <p><strong>Preventions:</strong> Healthy diet, regular exercise, avoid smoking.</p>
+    </div>
+
+    <!-- Osteoporosis -->
+    <div class="health-issue">
+      <h2>Osteoporosis</h2>
+      <p><strong>Causes:</strong> Aging, calcium deficiency, lack of vitamin D.</p>
+      <p><strong>Remedies:</strong> Calcium supplements, medication, weight-bearing exercises.</p>
+      <p><strong>Preventions:</strong> Adequate calcium intake, regular exercise, avoid smoking.</p>
+    </div>
+
+    <!-- Insomnia -->
+    <div class="health-issue">
+      <h2>Insomnia</h2>
+      <p><strong>Causes:</strong> Stress, anxiety, poor sleep habits.</p>
+      <p><strong>Remedies:</strong> Sleep hygiene, relaxation techniques, medication.</p>
+      <p><strong>Preventions:</strong> Regular sleep schedule, avoid caffeine, reduce screen time.</p>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
