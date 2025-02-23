@@ -383,6 +383,36 @@
         </form>
     </section><!--end-->
 
+    <!-- Add this before the chatbot container -->
+    <div class="sos-container">
+        <button class="sos-button" id="sosButton">
+            <i class="fas fa-phone"></i>
+            SOS
+        </button>
+        
+        <!-- Emergency Modal -->
+        <div id="emergencyModal" class="emergency-modal">
+            <div class="modal-content">
+                <h2>Emergency Services</h2>
+                <div class="emergency-numbers">
+                    <a href="tel:102" class="emergency-call">
+                        <i class="fas fa-ambulance"></i>
+                        Ambulance: 102
+                    </a>
+                    <a href="tel:112" class="emergency-call">
+                        <i class="fas fa-phone-volume"></i>
+                        Emergency: 112
+                    </a>
+                    <a href="tel:108" class="emergency-call">
+                        <i class="fas fa-hospital"></i>
+                        Medical: 108
+                    </a>
+                </div>
+                <button class="close-modal" id="closeModal">Close</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Chatbot -->
     <div class="chatbot-container">
         <button class="chatbot-toggle" id="chatbotToggle">

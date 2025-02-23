@@ -14,6 +14,28 @@ document.addEventListener('DOMContentLoaded', function() {
             startNewDiagnosis();
         }
     });
+
+    // Get modal elements
+    const sosButton = document.getElementById('sosButton');
+    const emergencyModal = document.getElementById('emergencyModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Show modal when SOS button is clicked
+    sosButton.addEventListener('click', function() {
+        emergencyModal.style.display = 'flex';
+    });
+
+    // Close modal when close button is clicked
+    closeModal.addEventListener('click', function() {
+        emergencyModal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function(event) {
+        if (event.target === emergencyModal) {
+            emergencyModal.style.display = 'none';
+        }
+    });
 });
 
 const healthDatabase = {
